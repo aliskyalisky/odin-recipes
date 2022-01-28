@@ -2,18 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Recipes</title>
 </head>
 <body>
-    <h1>Odin Recipes</h1>
-    <ul>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">ØR</h2>
+            <div class="toggle"></div>
+        </header>
 
-       <li> <a href="./recipes/meatballs.html">Swedish Meatballs</a> </li>
-       <li> <a href="./recipes/flatbread.html">Norweigan Flatbread</a> </li>
-       <li> <a href="./recipes/salmonsoup.html">Finnish Salmon Soup</a> </li>
-       <li> <a href="./recipes/cucumber.html">Danish Cucumber Salad</a> </li>
-    </ul>
+        <video src="./vid/video.mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>ODIN RECIPES</h2>
+            <p>YOUR FAVOURITE SCANDINAVIAN MEALS MADE EASY</p>
+            <a href="#">EXPLORE</a>
+        </div>
+      
+        <ul class="social">
+            <li><a href="#"><img src="./icon/fb.png" alt="facebook"></a></li>
+            <li><a href="#"><img src="./icon/ig.png" alt="instagram"></a></li>
+            <li><a href="#"><img src="./icon/twitter.png" alt="twitter"></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
 </body>
 </html>
